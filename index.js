@@ -1,4 +1,6 @@
-// Samuel Kiarie-- 12/06-2022
+// Samuel Kiarie-- 12/06/2022
+
+// DOM Manipulation using IDs from HTML elements
 let myLeads = [] 
 let oldLeads = []
 const inputEl = document.getElementById("input-el");
@@ -13,7 +15,7 @@ if(leadsFromLocalStorage){
   myLeads = leadsFromLocalStorage
   render(myLeads);
 }
-
+// addEventListener for the tab button
 tabBtn.addEventListener("click", function(){ 
  
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
@@ -23,6 +25,7 @@ tabBtn.addEventListener("click", function(){
     })
 })
 
+// A Function with one parameter
 function render(leads){
     let listItems = "";
     for( let i = 0; i< leads.length; i++){
